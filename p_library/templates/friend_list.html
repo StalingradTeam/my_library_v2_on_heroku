@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Список всех Должников</title>
+</head>
+<body>
+	<ul>
+		{% for friend in object_list %}
+		    <li>{{ friend.name }} {{ friend.surname }} <-> книга на прочтении с {{ friend.data }}</li>
+		{% endfor %}
+	</ul>
+</body>
+</html>
