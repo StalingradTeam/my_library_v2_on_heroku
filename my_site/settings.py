@@ -20,8 +20,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
-
+#SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'p0*@fyd%8ut04k+6)o-&t24t2+r1pkr+0s-0-dsxu*jqu_9t31'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -74,14 +74,14 @@ WSGI_APPLICATION = 'my_site.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-import dj_database_url  
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+#import dj_database_url  
+#DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
+}
 
 
 # Password validation
@@ -120,8 +120,4 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
-# STATIC_URL = '/static/'
-
-STATIC_URL = '/asset-v1:SkillFactory+PWS-9.1+06DEC2019+type@asset+block@'
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+STATIC_URL = '/static/'
